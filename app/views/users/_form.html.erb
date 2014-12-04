@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.collection_select :user_id, User.order(:name), :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
